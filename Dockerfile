@@ -5,7 +5,7 @@ FROM junxy/clash:res-ui as node_builder
 # 2. build clash
 # https://github.com/Dreamacro/clash/blob/master/Dockerfile
 FROM golang:alpine as go_builder
-RUN apk add --no-cache make git && \
+RUN apk add --no-cache make git 
 #    wget http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz -O /tmp/GeoLite2-Country.tar.gz && \
 #    tar zxvf /tmp/GeoLite2-Country.tar.gz -C /tmp && \
 #    mv /tmp/GeoLite2-Country_*/GeoLite2-Country.mmdb /Country.mmdb
