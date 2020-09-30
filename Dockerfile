@@ -31,6 +31,7 @@ RUN apk add --no-cache tzdata ca-certificates \
     && apk del tzdata
 
 COPY --from=go_builder /Country.mmdb /root/.config/clash/
+COPY --from=go_builder /config.yaml /root/.config/clash/
 COPY --from=go_builder /clash /
 COPY --from=node_builder /clash_ui /root/.config/clash/clash_ui
 
